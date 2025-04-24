@@ -1,0 +1,28 @@
+### 
+# train_user schema
+# Trains and records metrics on a downstream model trained on input labels.
+# Outputs the poison accuracy, clean accuracy, and training labels .npy files and a final model .pth.
+# print the result of probability-available verification(defenders can get probability vectors).
+###
+
+[train_user]
+input_labels = "string. Path to input labels .npy files (slurm compatible)."
+output_dir = "string. Path to output directory (slurm compatible)."
+user_model = "string: {r32p, r18, r18_tin}. For ResNets."
+dataset = "string: {cifar, cifar_100}. For CIFAR-10 and CIFAR-100."
+trainer = "string: {sgd, adam}. Specifies optimizer."
+source_label = "int: {0,1,...,9}. Specifies label to mimic."
+target_label = "int: {0,1,...,9}. Specifies label to attack."
+poisoner = "string: Form: {1xp, 1xs, 1xt}. Integer resembles number of attacks and string represents type."
+sample_number="int:{0,1,...infty}"
+scale_start=""
+scale_stop=""
+scale_step=""
+[OPTIONAL]
+true_labels = "string. Path to input labels .npy files (slurm compatible)."
+soft = "bool. Specifies whether to compute on logit or hard labels."
+alpha = "float: [0, 1]. Specifies interpolation parameter between true (1) and input (0) labels. Set to 0 (full input) if omitted."
+batch_size = "int: {0,1,...,infty}. Specifies batch size. Set to default for trainer if omitted."
+epochs = "int: {0,1,...,infty}. Specifies number of epochs. Set to default for trainer if omitted."
+optim_kwargs = "dict. Optional keywords for Pytorch SGD / Adam optimizer. See sever example."
+scheduler_kwargs = "dict. Optional keywords for Pytorch learning rate optimizer (with SGD). See sever example."

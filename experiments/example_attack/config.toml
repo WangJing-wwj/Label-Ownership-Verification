@@ -29,11 +29,11 @@ poisoner = "1xs"
 output_dir = "experiments/example_attack/"
 lambda = 0.0
  
-# [generate_labels.expert_config]
+[generate_labels.expert_config]
 experts = 1
 min = 0
 max = 20 
-# [generate_labels.attack_config]
+[generate_labels.attack_config]
 iterations=5
 one_hot_temp = 5
 alpha = 0

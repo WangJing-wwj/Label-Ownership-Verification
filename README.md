@@ -1,5 +1,5 @@
 # Label-Ownership-Verification
-Official implementation of Label Ownership Verification
+Official implementation of Protect Label Copyright: Black-box Label Ownership Verification via Backdoor Watermarking
 
 ---
 

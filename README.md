@@ -90,4 +90,4 @@ As an example, to run the `example_attack` experiment one could run:
 python run_experiment.py example_attack
 ```
 
-More module documentation can be found in the `schemas` folder.
+Then you will obtain p-value in 'Malicious' case.

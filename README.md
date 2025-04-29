@@ -14,12 +14,17 @@ the suspicious DNN model contains specific hidden backdoors via hypothesis tests
 ## In this repo
 
 ### Main modules:
-\[Label Backdoor Watermarking\]\\
-`train_expert`: training expert models and recording trajectories.\\
-`generate_labels`: generating poisoned labels from trajectories.\\
-`select_flips`: strategically alter hard labels within some budget.\\
-\[Label Ownership Verification\]\\
-`train_user`: Conduct label ownership verification to obtain p-value\\
+\[Label Backdoor Watermarking\]
+
+`train_expert`: training expert models and recording trajectories.
+
+`generate_labels`: generating poisoned labels from trajectories.
+
+`select_flips`: strategically alter hard labels within some budget.
+
+\[Label Ownership Verification\]
+
+`train_user`: Conduct label ownership verification to obtain p-value
 
 ---
 

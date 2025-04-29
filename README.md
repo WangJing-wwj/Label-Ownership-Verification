@@ -17,7 +17,7 @@ High-quality labels constitute valuable intellectual property that requires dete
 1. `train_expert`: training expert models and recording trajectories.
 1. `generate_labels`: generating poisoned labels from trajectories.
 1. `select_flips`: strategically alter hard labels within some budget.
-1. `train_user`: Evaluation module to assess attack success rate.
+1. `train_user`: Evaluation module to assess ACC/ASR and p-value
 
 ---
 

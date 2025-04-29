@@ -90,4 +90,4 @@ As an example, to run the `example_attack` experiment one could run:
 python run_experiment.py example_attack
 ```
 
-Then you will obtain p-value in 'Malicious' case.
+Then you will obtain p-value in 'Malicious' case, which should be less than 0.05.

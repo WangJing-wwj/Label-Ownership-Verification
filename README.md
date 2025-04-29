@@ -14,9 +14,9 @@ High-quality labels constitute valuable intellectual property that requires dete
 ### Existing modules:
 
 1. `base_utils`: Utility module, used by the base modules.
-1. `train_expert`: Step 1 of our algorithm: training expert models and recording trajectories.
-1. `generate_labels`: Step 2 of our algorithm: generating poisoned labels from trajectories.
-1. `select_flips`: Step 3 of algorithm: strategically alter hard labels within some budget.
+1. `train_expert`: training expert models and recording trajectories.
+1. `generate_labels`: generating poisoned labels from trajectories.
+1. `select_flips`: strategically alter hard labels within some budget.
 1. `train_user`: Evaluation module to assess attack success rate.
 
 ---

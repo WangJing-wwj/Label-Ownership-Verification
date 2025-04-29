@@ -8,7 +8,7 @@ Official implementation of 《Protect Label Copyright: Black-box Label Ownership
 High-quality labels constitute valuable intellectual property that requires detecting unauthorized use. Existing dataset ownership verification (DOV) methods have proven effective in detecting unauthorized use of dataset, relying on image tampering to inject watermarks; however, label owners cannot modify images in released datasets (which are independently provided by image owners) and can only alter the labels. Consequently, existing DOV techniques cannot be directly leveraged to safeguard label copyright. To fill this gap, this paper proposes Label Ownership Verification via Backdoor Watermarking (LVBW) which verifies whether a specific label owner's labels are utilized during the training of the black-box target model. Specifically, our method consists of two main components: (i) label watermarking, where labels are watermarked via a clean-image backdoor attack, and (ii) label ownership verification, where a hypothesis-test-guided method is designed to verify ownership based on probability vectors. We also provide theoretical analyses to ensure the credibility of the verification results. Extensive experiments demonstrate the effectiveness of our method and its resilience against potential adaptive methods. 
 
 ---
-
+![image](https://github.com/WangJing-wwj/Label-Ownership-Verification/blob/main/overview.png)
 ## In this repo
 
 ### Existing modules:

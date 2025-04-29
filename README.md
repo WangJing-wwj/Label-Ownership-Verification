@@ -9,15 +9,17 @@ High-quality labels constitute valuable intellectual property that requires dete
 
 ---
 ![image](https://github.com/WangJing-wwj/Label-Ownership-Verification/blob/main/overview.png)
+Fig 1:The workflow of label ownership verification via backdoor watermarking (LVBW). In Stage I, the defender (i.e., the label owner), exploits a clean-image backdoor attack for label watermarking. In Stage II, the defender conducts label owner verification by examining whether
+the suspicious DNN model contains specific hidden backdoors via hypothesis tests. We consider a black-box scenario where the defender can access the predicted probability vectors.
 ## In this repo
 
-### Existing modules:
-
-1. `base_utils`: Utility module, used by the base modules.
-1. `train_expert`: training expert models and recording trajectories.
-1. `generate_labels`: generating poisoned labels from trajectories.
-1. `select_flips`: strategically alter hard labels within some budget.
-1. `train_user`: Evaluation module to assess ACC/ASR and p-value
+### Main modules:
+[Label Backdoor Watermarking]
+`train_expert`: training expert models and recording trajectories.
+`generate_labels`: generating poisoned labels from trajectories.
+`select_flips`: strategically alter hard labels within some budget.
+[Label Ownership Verification]
+`train_user`: Conduct label ownership verification to obtain p-value
 
 ---
 

@@ -89,8 +89,6 @@ def run(experiment_name, module_name,config_file, **kwargs):
         expert_id=None,
         record=True
     )
-
-    # model_retrain.load_state_dict(torch.load("/home/ZhaoZQ/repos/MyCodes/FLIP/out/checkpoints/cifar100_r18_1xs_acc_0.8054_asr0.98.pth"))
     
     # Verification Preparation
     dataset =\

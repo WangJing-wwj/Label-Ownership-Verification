@@ -479,7 +479,8 @@ def make_dataloader(
     *,
     shuffle=True,
     drop_last=True
-):
+):  
+    print("shuffle")
     dataloader = DataLoader(
         dataset,
         batch_size=batch_size,

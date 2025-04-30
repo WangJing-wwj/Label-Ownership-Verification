@@ -1,10 +1,8 @@
 """
 Run experiment based on config.
 """
-
 import sys
 import os
-
 import numpy as np
 import toml
 from collections import OrderedDict
@@ -12,7 +10,6 @@ from collections import OrderedDict
 sys.path.insert(0, os.path.abspath(
         os.path.join(os.path.dirname(__file__), 'modules')
     ))
-
 from modules.base_utils import util
 
 experiment_name = sys.argv[1]

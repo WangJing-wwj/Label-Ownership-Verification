@@ -154,6 +154,21 @@ def either_dataloader_dataset_to_both(
     return dataloader, dataset
 
 
+def temp_dataloader(
+    data: Union[DataLoader, Dataset], *, batch_size=None
+):
+    dl_kwargs = {}
+    dl_kwargs.update(dict(batch_size=1, shuffle=False,
+                              drop_last=False))
+    if batch_size is not None:
+        dl_kwargs["batch_size"] = batch_size
+    dataloader = make_dataloader(data, **dl_kwargs)
+
+    return dataloader
+
+
+
+
 clf_loss = torch.nn.CrossEntropyLoss()
 total_mse_distance = torch.nn.MSELoss(reduction="sum")
 softmax = torch.nn.Softmax(dim=1)

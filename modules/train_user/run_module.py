@@ -14,7 +14,7 @@ from modules.base_utils.util import extract_toml, get_train_info, mini_train, lo
                                     needs_big_ims, slurmify_path, softmax,clf_eval
 from modules.base_utils.SCALE_UP import SCALE_UP
 
-def run(experiment_name, module_name,config_file, **kwargs):
+def run(experiment_name, module_name, **kwargs):
     """
     Runs user model training and saves metrics.
 
@@ -23,7 +23,7 @@ def run(experiment_name, module_name,config_file, **kwargs):
     :param kwargs: Additional arguments (such as slurm id).
     """
     slurm_id = kwargs.get('slurm_id', None)
-    args = extract_toml(experiment_name, module_name,config_file)
+    args = extract_toml(experiment_name, module_name)
 
     user_model_flag = args["user_model"]
     trainer_flag = args["trainer"]
@@ -39,9 +39,6 @@ def run(experiment_name, module_name,config_file, **kwargs):
     alpha = args.get("alpha", None)
     train_pct=args.get("train_pct",1.0)
     sample_number=args.get("sample_number",50)
-    scale_start=args.get("scale_start",1.0)
-    scale_stop=args.get("scale_stop",4.001)
-    scale_step=args.get("scale_step",0.0025)
     input_path = slurmify_path(args["input_labels"], slurm_id)
     true_path = slurmify_path(args.get("true_labels", None), slurm_id)
     output_path = slurmify_path(args["output_dir"], slurm_id)

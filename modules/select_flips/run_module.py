@@ -10,7 +10,7 @@ import numpy as np
 from modules.base_utils.util import extract_toml, slurmify_path
 
 
-def run(experiment_name, module_name,config_file, **kwargs):
+def run(experiment_name, module_name, **kwargs):
     """
     Runs label flip selection and saves a coalesced result.
 
@@ -21,7 +21,7 @@ def run(experiment_name, module_name,config_file, **kwargs):
 
     slurm_id = kwargs.get('slurm_id', None)
 
-    args = extract_toml(experiment_name, module_name,config_file)
+    args = extract_toml(experiment_name, module_name)
     budgets = args.get("budgets", [150, 300, 500, 1000, 1500])
     input_label_glob = slurmify_path(args["input_label_glob"], slurm_id)
     true_labels = slurmify_path(args["true_labels"], slurm_id)
